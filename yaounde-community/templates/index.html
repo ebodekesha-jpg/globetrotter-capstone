@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% import "_icons.html" as icons %}
+{% block title %}Yaoundé Community Explorer — discover the Seven Hills{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">● Community-curated · Seven Hills city</span>
+    <h1>Find your next Yaoundé outing.</h1>
+    <p class="lead">Markets, hills, museums, lakesides and neighborhood spots — mapped, reviewed and recommended by people who actually live here.</p>
+
+    <form class="search-card" id="heroSearch" action="{{ url_for('explore') }}" method="get">
+      <input type="text" name="q" placeholder="Search “Mont Fébé”, “market”, “Bastos”…" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><b>36+</b><span>Places mapped</span></div>
+      <div class="hero-stat"><b>23</b><span>Neighborhoods</span></div>
+      <div class="hero-stat"><b>100%</b><span>Community reviewed</span></div>
+    </div>
+
+    <div class="weather-card" id="weatherWidget">
+      <span class="weather-desc">Loading weather…</span>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow-sm">Browse by mood</span>
+      <h2>What kind of outing today?</h2>
+    </div>
+  </div>
+  <div class="chip-row">
+    <a class="chip" href="{{ url_for('explore') }}?category=Market">🧺 Markets</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Nature">🌿 Nature &amp; parks</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Museum">🏛️ Museums</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Heritage">🕍 Heritage</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Sports">⚽ Sports &amp; evenings</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Neighborhood">🚶 Neighborhood walks</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=University">🎓 Universities</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Restaurant">🍽️ Restaurants</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Supermarket">🛒 Supermarkets</a>
+    <a class="chip" href="{{ url_for('explore') }}?category=Cinema">🎬 Cinema</a>
+  </div>
+
+  <div class="section-head">
+    <div>
+      <span class="eyebrow-sm">Community favorites</span>
+      <h2>Popular right now</h2>
+    </div>
+    <a class="btn btn-ghost" href="{{ url_for('explore') }}">See all places →</a>
+  </div>
+  <div class="card-grid" id="featuredGrid">
+    <p>Loading places…</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--cream-deep);">
+  <div class="wrap" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
+    <div style="flex:1; min-width:280px;">
+      <span class="eyebrow-sm">Built together</span>
+      <h2>Every review comes from a neighbor.</h2>
+      <p>Sign in, rate the places you've visited, and save your own itinerary of Yaoundé outings to share with friends and family.</p>
+      <a class="btn btn-forest" href="{{ url_for('register_page') }}">Join the community</a>
+    </div>
+    <div style="flex:1; min-width:280px;">
+      <div id="miniMap" style="height:260px; border-radius:16px; overflow:hidden; border:1px solid var(--line);"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow-sm">From the community</span>
+      <h2>Recent reviews</h2>
+    </div>
+    <a class="btn btn-ghost" href="{{ url_for('reviews_page') }}">See all reviews →</a>
+  </div>
+  <div id="recentReviews"><p>Loading reviews…</p></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ static_url('js/icons.js') }}"></script>
+<script src="{{ static_url('js/home.js') }}"></script>
+{% endblock %}

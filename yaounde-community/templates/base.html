@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Yaoundé Community Explorer{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+{% set map_pages = ['index', 'explore', 'destination_page', 'my_itinerary_page'] %}
+{% if request.endpoint in map_pages %}
+<link rel="preconnect" href="https://tile.openstreetmap.org">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+{% endif %}
+<link rel="stylesheet" href="{{ static_url('css/style.css') }}">
+{% block head %}{% endblock %}
+</head>
+<body>
+
+<div class="pagne-strip" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ url_for('index') }}">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34">
+          <circle cx="24" cy="24" r="21" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <circle cx="24" cy="24" r="14" fill="none" stroke="var(--clay)" stroke-width="2"/>
+          <circle cx="24" cy="24" r="7" fill="var(--forest)"/>
+        </svg>
+      </span>
+      <span class="brand-text">Yaoundé<br><small>Community Explorer</small></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('explore') }}">Explore</a>
+      <a href="{{ url_for('my_itinerary_page') }}">My Itinerary</a>
+      <a href="{{ url_for('reviews_page') }}">Reviews</a>
+      <a href="{{ url_for('about') }}">About</a>
+    </nav>
+
+    <div class="header-actions" id="authArea" data-user="{{ user.name if user else '' }}">
+      {% if user %}
+        <span class="hi-user">Hi, {{ user.name.split(' ')[0] }}</span>
+        <button class="btn btn-ghost" id="logoutBtn">Log out</button>
+      {% else %}
+        <a class="btn btn-ghost" href="{{ url_for('login_page') }}">Log in</a>
+        <a class="btn btn-primary" href="{{ url_for('register_page') }}">Join in</a>
+      {% endif %}
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="pagne-strip" aria-hidden="true"></div>
+  <div class="wrap footer-inner">
+    <div>
+      <span class="brand-text footer-brand">Yaoundé Community Explorer</span>
+      <p>A community-built guide to markets, hills, museums and gathering places across the Seven Hills city — made by neighbors, for neighbors.</p>
+    </div>
+    <div class="footer-links">
+      <strong>Explore</strong>
+      <a href="{{ url_for('explore') }}?category=Market">Markets</a>
+      <a href="{{ url_for('explore') }}?category=Nature">Nature &amp; parks</a>
+      <a href="{{ url_for('explore') }}?category=Museum">Museums</a>
+      <a href="{{ url_for('explore') }}?category=Heritage">Heritage</a>
+    </div>
+    <div class="footer-links">
+      <strong>Community</strong>
+      <a href="{{ url_for('about') }}">About this project</a>
+      <a href="{{ url_for('my_itinerary_page') }}">My itinerary</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© {{ 2026 }} Yaoundé Community Explorer — built with Flask, OpenStreetMap &amp; Leaflet. Built by Ebode Kesha, with a lot of love for the Seven Hills.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="{{ static_url('js/main.js') }}"></script>
+{% if request.endpoint in map_pages %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="{{ static_url('js/leaflet-map.js') }}"></script>
+<script src="{{ static_url('js/directions.js') }}"></script>
+{% endif %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Page not found — Yaoundé Community Explorer{% endblock %}
+{% block content %}
+<section class="not-found wrap">
+  <h1>404</h1>
+  <h2>This spot isn't on the map.</h2>
+  <p>The page you're looking for doesn't exist. Let's get you back to exploring.</p>
+  <a class="btn btn-primary" href="{{ url_for('index') }}">Back home</a>
+</section>
+{% endblock %}

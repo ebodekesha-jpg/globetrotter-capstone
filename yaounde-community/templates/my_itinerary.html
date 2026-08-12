@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}My Itinerary — Yaoundé Community Explorer{% endblock %}
+
+{% block content %}
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow-sm">Your plan</span>
+      <h2>My itinerary</h2>
+      <p>Places you've saved to visit around Yaoundé.</p>
+    </div>
+    <a class="btn btn-ghost" href="{{ url_for('explore') }}">+ Add more places</a>
+  </div>
+
+  {% if not user %}
+    <div class="empty-state">
+      <h3>Log in to see your itinerary</h3>
+      <p>Create a free account to start saving places you want to visit.</p>
+      <a class="btn btn-primary" href="{{ url_for('login_page') }}" style="margin-top:12px;">Log in</a>
+    </div>
+  {% else %}
+    <div id="itinList"><p>Loading your itinerary…</p></div>
+  {% endif %}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ static_url('js/icons.js') }}"></script>
+<script src="{{ static_url('js/itinerary.js') }}"></script>
+{% endblock %}

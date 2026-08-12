@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "name": "Marché Central",
+    "category": "Market",
+    "neighborhood": "Centre-ville",
+    "lat": 3.8667,
+    "lng": 11.5167,
+    "price": "Free entry",
+    "description": "The beating heart of downtown Yaoundé. Narrow aisles packed with fabric, spices, shoes and fresh produce — go early, haggle politely, and bring cash.",
+    "tags": [
+      "shopping",
+      "food",
+      "culture"
+    ],
+    "best_time": "7:00 AM – 1:00 PM",
+    "icon": "market",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/March%C3%A9%20central%20-%20Central%20market%20%28interior%29%20in%20Yaound%C3%A9.JPG?width=900"
+  },
+  {
+    "id": 2,
+    "name": "Marché Mokolo",
+    "category": "Market",
+    "neighborhood": "Mokolo",
+    "lat": 3.877,
+    "lng": 11.501,
+    "price": "Free entry",
+    "description": "Cameroon's biggest market by volume of goods. Electronics, wax-print fabric, spare parts — if it exists, someone at Mokolo sells it.",
+    "tags": [
+      "shopping",
+      "food"
+    ],
+    "best_time": "8:00 AM – 3:00 PM",
+    "icon": "market",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambiance%20du%20march%C3%A9%20du%20Mfoundi.jpg?width=900"
+  },
+  {
+    "id": 3,
+    "name": "Mont Fébé",
+    "category": "Nature",
+    "neighborhood": "Fébé",
+    "lat": 3.902,
+    "lng": 11.523,
+    "price": "Free (hotel grounds fee may apply)",
+    "description": "A forested hill overlooking the city with the best sunrise view in Yaoundé. A short hike or a drive up rewards you with a full skyline panorama.",
+    "tags": [
+      "nature",
+      "hiking",
+      "viewpoint"
+    ],
+    "best_time": "6:00 AM – 9:00 AM",
+    "icon": "hill",
+    "image": null
+  },
+  {
+    "id": 4,
+    "name": "Musée National du Cameroun",
+    "category": "Museum",
+    "neighborhood": "Centre administratif",
+    "lat": 3.873,
+    "lng": 11.517,
+    "price": "1,000 FCFA",
+    "description": "Housed in a former presidential palace, this museum traces Cameroon's kingdoms, colonial history and independence through masks, thrones and archives.",
+    "tags": [
+      "culture",
+      "history",
+      "indoor"
+    ],
+    "best_time": "9:00 AM – 4:30 PM",
+    "icon": "museum",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e%20national%20de%20Yaound%C3%A9%20Cameroun.jpg?width=900"
+  },
+  {
+    "id": 5,
+    "name": "Cathédrale Notre-Dame des Victoires",
+    "category": "Heritage",
+    "neighborhood": "Centre-ville",
+    "lat": 3.8656,
+    "lng": 11.5195,
+    "price": "Free",
+    "description": "A calm, twin-towered landmark in the middle of the busy centre-ville — step inside for stained glass and a moment of quiet away from the traffic.",
+    "tags": [
+      "heritage",
+      "architecture",
+      "quiet"
+    ],
+    "best_time": "Anytime, Mass on Sundays",
+    "icon": "landmark",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale%20Notre-Dame%20Yaound%C3%A9.jpg?width=900"
+  },
+  {
+    "id": 6,
+    "name": "Jardin Botanique et Zoologique de Mvog-Betsi",
+    "category": "Nature",
+    "neighborhood": "Mvog-Betsi",
+    "lat": 3.8649,
+    "lng": 11.4875,
+    "price": "1,500 FCFA",
+    "description": "A shaded rescue-animal sanctuary and botanical walk — gorillas, chimpanzees and native trees, run by a conservation NGO right inside the city.",
+    "tags": [
+      "nature",
+      "family",
+      "wildlife"
+    ],
+    "best_time": "9:00 AM – 5:00 PM",
+    "icon": "leaf",
+    "image": null
+  },
+  {
+    "id": 7,
+    "name": "Stade Ahmadou Ahidjo",
+    "category": "Sports",
+    "neighborhood": "Tsinga",
+    "lat": 3.8608,
+    "lng": 11.5138,
+    "price": "Varies by event",
+    "description": "The historic home of the Indomitable Lions. On match day the whole neighborhood turns into one long celebration before kickoff even starts.",
+    "tags": [
+      "sports",
+      "nightlife",
+      "community"
+    ],
+    "best_time": "Event days, evenings",
+    "icon": "stadium",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stade%20Omnisports%20Ahmadou%20Ahidjo%20Yaound%C3%A9%2001.jpg?width=900"
+  },
+  {
+    "id": 8,
+    "name": "Lac Municipal",
+    "category": "Park",
+    "neighborhood": "Élig-Essono",
+    "lat": 3.8639,
+    "lng": 11.5231,
+    "price": "Free (paddle boats extra)",
+    "description": "A small lakeside park popular with families on Sunday afternoons — paddle boats, grilled fish stalls, and shaded benches along the water.",
+    "tags": [
+      "park",
+      "family",
+      "food"
+    ],
+    "best_time": "4:00 PM – 7:00 PM",
+    "icon": "lake",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lac%20Municipal%20de%20Yaounde.jpg?width=900"
+  },
+  {
+    "id": 9,
+    "name": "Quartier Bastos",
+    "category": "Neighborhood",
+    "neighborhood": "Bastos",
+    "lat": 3.8853,
+    "lng": 11.5178,
+    "price": "Free to walk",
+    "description": "The diplomatic quarter — leafy avenues, embassies, and a growing strip of restaurants and cafés perfect for an evening walk.",
+    "tags": [
+      "food",
+      "walking",
+      "nightlife"
+    ],
+    "best_time": "6:00 PM – 10:00 PM",
+    "icon": "district",
+    "image": null
+  },
+  {
+    "id": 10,
+    "name": "Monument de la Réunification",
+    "category": "Heritage",
+    "neighborhood": "Tsinga",
+    "lat": 3.8682,
+    "lng": 11.5178,
+    "price": "Free",
+    "description": "A sweeping concrete spiral monument marking the 1961 reunification of Cameroon — climb to the top for one of the best free skyline views downtown.",
+    "tags": [
+      "heritage",
+      "viewpoint",
+      "history"
+    ],
+    "best_time": "4:00 PM – 6:30 PM",
+    "icon": "monument",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monument%20de%20la%20r%C3%A9unification%20Yaound%C3%A9%2001.JPG?width=900"
+  },
+  {
+    "id": 11,
+    "name": "Village Artisanal du Mfoundi",
+    "category": "Market",
+    "neighborhood": "Mfoundi",
+    "lat": 3.86,
+    "lng": 11.51,
+    "price": "Free entry",
+    "description": "A cluster of artisan workshops where you can watch wood carvers, bronze casters and weavers work, then buy directly from the maker.",
+    "tags": [
+      "shopping",
+      "culture",
+      "crafts"
+    ],
+    "best_time": "9:00 AM – 5:00 PM",
+    "icon": "craft",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambiance%20du%20march%C3%A9%20du%20Mfoundi.jpg?width=900"
+  },
+  {
+    "id": 12,
+    "name": "Chutes de la Méfou",
+    "category": "Nature",
+    "neighborhood": "Mfou (outskirts)",
+    "lat": 3.718,
+    "lng": 11.635,
+    "price": "Free",
+    "description": "A short drive outside the city, these forest waterfalls are a favorite weekend escape for Yaoundéans who want fresh air and running water.",
+    "tags": [
+      "nature",
+      "hiking",
+      "day-trip"
+    ],
+    "best_time": "Weekend mornings",
+    "icon": "waterfall",
+    "image": null
+  },
+  {
+    "id": 13,
+    "name": "Musée Blackitude",
+    "category": "Museum",
+    "neighborhood": "Nkolbisson",
+    "lat": 3.885,
+    "lng": 11.46,
+    "price": "2,000 FCFA",
+    "description": "A striking pan-African art museum celebrating the diaspora's contribution to global culture, with rotating exhibitions and a sculpture garden.",
+    "tags": [
+      "culture",
+      "art",
+      "indoor"
+    ],
+    "best_time": "10:00 AM – 5:00 PM",
+    "icon": "museum",
+    "image": null
+  },
+  {
+    "id": 14,
+    "name": "Complexe Sportif de Mfandena",
+    "category": "Sports",
+    "neighborhood": "Mfandena",
+    "lat": 3.879,
+    "lng": 11.509,
+    "price": "Free / small court fee",
+    "description": "A neighborhood sports ground where locals gather every evening for pick-up football, basketball and running — a great way to meet people.",
+    "tags": [
+      "sports",
+      "community",
+      "evening"
+    ],
+    "best_time": "5:00 PM – 7:30 PM",
+    "icon": "stadium",
+    "image": null
+  },
+  {
+    "id": 15,
+    "name": "Marché des Fleurs de Nlongkak",
+    "category": "Market",
+    "neighborhood": "Nlongkak",
+    "lat": 3.883,
+    "lng": 11.515,
+    "price": "Free entry",
+    "description": "A small, colourful flower and plant market tucked into a roundabout — a favorite stop for anyone decorating for a wedding or naming ceremony.",
+    "tags": [
+      "shopping",
+      "quiet"
+    ],
+    "best_time": "8:00 AM – 12:00 PM",
+    "icon": "market",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambiance%20du%20march%C3%A9%20du%20Mfoundi.jpg?width=900"
+  },
+  {
+    "id": 16,
+    "name": "Palais des Congrès",
+    "category": "Heritage",
+    "neighborhood": "Ngoa-Ekelle",
+    "lat": 3.873,
+    "lng": 11.529,
+    "price": "Free to view exterior",
+    "description": "A landmark of late-70s Cameroonian architecture, still used for state ceremonies and major conferences — an impressive photo stop on the ring road.",
+    "tags": [
+      "architecture",
+      "landmark"
+    ],
+    "best_time": "Anytime",
+    "icon": "landmark",
+    "image": null
+  },
+  {
+    "id": 17,
+    "name": "Université de Yaoundé I",
+    "category": "University",
+    "neighborhood": "Ngoa-Ekelle",
+    "lat": 3.857,
+    "lng": 11.5013,
+    "price": "Free to visit the grounds",
+    "description": "Cameroon's oldest and largest public university, spread across a leafy hillside campus in Ngoa-Ekelle — walk through and you'll feel the energy of thousands of students between lectures.",
+    "tags": [
+      "education",
+      "walking",
+      "landmark"
+    ],
+    "best_time": "Weekday afternoons",
+    "icon": "university",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A9%20de%20Yaound%C3%A9%20I.jpg?width=900"
+  },
+  {
+    "id": 18,
+    "name": "Université de Yaoundé II",
+    "category": "University",
+    "neighborhood": "Soa",
+    "lat": 3.933,
+    "lng": 11.6135,
+    "price": "Free to visit the grounds",
+    "description": "Cameroon's law, economics and journalism powerhouse, set on a newer campus just outside the city in Soa — home to ESSTIC and IRIC, two of the country's most competitive schools.",
+    "tags": [
+      "education"
+    ],
+    "best_time": "Weekday afternoons",
+    "icon": "university",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/IFORD%20Yaound%C3%A9%20%282014%29%20front.jpg?width=900"
+  },
+  {
+    "id": 19,
+    "name": "École Normale Supérieure de Yaoundé",
+    "category": "School",
+    "neighborhood": "Ngoa-Ekelle",
+    "lat": 3.858,
+    "lng": 11.4995,
+    "price": "Free to visit the grounds",
+    "description": "The country's flagship teacher-training college, right next to Université de Yaoundé I — generations of Cameroon's teachers trained on this campus.",
+    "tags": [
+      "education"
+    ],
+    "best_time": "Weekday afternoons",
+    "icon": "school",
+    "image": null
+  },
+  {
+    "id": 20,
+    "name": "Lycée Général Leclerc",
+    "category": "School",
+    "neighborhood": "Tsinga",
+    "lat": 3.871,
+    "lng": 11.516,
+    "price": "Free to view exterior",
+    "description": "One of Cameroon's most prestigious public high schools, with alumni across the country's government and business world — a proud landmark for the whole neighborhood.",
+    "tags": [
+      "education",
+      "landmark"
+    ],
+    "best_time": "Anytime",
+    "icon": "school",
+    "image": null
+  },
+  {
+    "id": 21,
+    "name": "Canal Olympia Yaoundé",
+    "category": "Cinema",
+    "neighborhood": "Mvog-Ada",
+    "lat": 3.858,
+    "lng": 11.521,
+    "price": "From 2,000 FCFA",
+    "description": "A modern cinema and live-event hall that also hosts concerts and community screenings — the go-to spot for a night out watching the latest releases.",
+    "tags": [
+      "nightlife",
+      "family",
+      "indoor"
+    ],
+    "best_time": "Evenings and weekends",
+    "icon": "cinema",
+    "image": null
+  },
+  {
+    "id": 22,
+    "name": "Restaurant Le Bantoo",
+    "category": "Restaurant",
+    "neighborhood": "Bastos",
+    "lat": 3.884,
+    "lng": 11.5185,
+    "price": "Mid-range",
+    "description": "A relaxed Bastos favorite for Cameroonian classics done well — ndolé, grilled fish and plantain, with a shaded terrace that fills up fast on weekend evenings.",
+    "tags": [
+      "food",
+      "evening"
+    ],
+    "best_time": "7:00 PM – 10:00 PM",
+    "icon": "restaurant",
+    "image": null
+  },
+  {
+    "id": 23,
+    "name": "Restaurant Saveurs d'Asie",
+    "category": "Restaurant",
+    "neighborhood": "Mfandena",
+    "lat": 3.8795,
+    "lng": 11.5085,
+    "price": "Mid-range",
+    "description": "A long-running Asian kitchen popular with Yaoundé's expat and student crowd alike — good for a change of pace from the city's grills and stews.",
+    "tags": [
+      "food"
+    ],
+    "best_time": "12:00 PM – 2:00 PM, 7:00 PM – 9:30 PM",
+    "icon": "restaurant",
+    "image": null
+  },
+  {
+    "id": 24,
+    "name": "Santa Lucia Supermarket",
+    "category": "Supermarket",
+    "neighborhood": "Bastos",
+    "lat": 3.8865,
+    "lng": 11.5195,
+    "price": "Regular retail prices",
+    "description": "A well-stocked supermarket in the diplomatic quarter, popular for imported goods that are harder to find elsewhere in the city.",
+    "tags": [
+      "shopping"
+    ],
+    "best_time": "9:00 AM – 8:00 PM",
+    "icon": "supermarket",
+    "image": null
+  },
+  {
+    "id": 25,
+    "name": "Casino Supermarket Warda",
+    "category": "Supermarket",
+    "neighborhood": "Warda",
+    "lat": 3.879,
+    "lng": 11.5095,
+    "price": "Regular retail prices",
+    "description": "Part of the busy Carrefour Warda commercial strip — a reliable one-stop supermarket for groceries and household goods.",
+    "tags": [
+      "shopping"
+    ],
+    "best_time": "9:00 AM – 9:00 PM",
+    "icon": "supermarket",
+    "image": null
+  },
+  {
+    "id": 26,
+    "name": "Centre Commercial Dovv",
+    "category": "Supermarket",
+    "neighborhood": "Mvan",
+    "lat": 3.83,
+    "lng": 11.513,
+    "price": "Regular retail prices",
+    "description": "One of Yaoundé's larger shopping centers, with a supermarket anchor plus smaller boutiques — a good stop for a full errand run in one trip.",
+    "tags": [
+      "shopping",
+      "family"
+    ],
+    "best_time": "9:00 AM – 8:00 PM",
+    "icon": "supermarket",
+    "image": null
+  },
+  {
+    "id": 27,
+    "name": "Stade Militaire de Yaoundé",
+    "category": "Sports",
+    "neighborhood": "Messa",
+    "lat": 3.862,
+    "lng": 11.495,
+    "price": "Free / small event fee",
+    "description": "A community sports ground used for local football matches and military ceremonies alike — smaller and friendlier than the big stadium downtown.",
+    "tags": [
+      "sports",
+      "community"
+    ],
+    "best_time": "Weekend afternoons",
+    "icon": "stadium",
+    "image": null
+  },
+  {
+    "id": 28,
+    "name": "Hôtel Hilton Yaoundé",
+    "category": "Hotel",
+    "neighborhood": "Centre-ville",
+    "lat": 3.867,
+    "lng": 11.518,
+    "price": "Upscale",
+    "description": "A landmark high-rise hotel in the heart of downtown, with a rooftop pool and skyline views — a popular meeting point even for people not staying there.",
+    "tags": [
+      "landmark"
+    ],
+    "best_time": "Anytime",
+    "icon": "hotel",
+    "image": null
+  },
+  {
+    "id": 29,
+    "name": "Institut Français du Cameroun",
+    "category": "Culture",
+    "neighborhood": "Bastos",
+    "lat": 3.883,
+    "lng": 11.516,
+    "price": "Varies by event, often free",
+    "description": "A cultural center with a cinema, library, theatre and regular exhibitions — one of the best places to catch live music, film screenings, or a gallery opening.",
+    "tags": [
+      "culture",
+      "evening",
+      "indoor"
+    ],
+    "best_time": "Evenings for events",
+    "icon": "culture",
+    "image": null
+  },
+  {
+    "id": 30,
+    "name": "Marché Essos",
+    "category": "Market",
+    "neighborhood": "Essos",
+    "lat": 3.8735,
+    "lng": 11.531,
+    "price": "Free entry",
+    "description": "A busy neighborhood market east of downtown, known for fresh produce and some of the best street food stalls in the city.",
+    "tags": [
+      "food",
+      "shopping"
+    ],
+    "best_time": "7:00 AM – 2:00 PM",
+    "icon": "market",
+    "image": null
+  },
+  {
+    "id": 31,
+    "name": "Quartier Mvog-Mbi",
+    "category": "Neighborhood",
+    "neighborhood": "Mvog-Mbi",
+    "lat": 3.8555,
+    "lng": 11.5215,
+    "price": "Free to walk",
+    "description": "A dense, lively commercial quarter south of downtown, packed with small shops, bars and grilled-fish spots — a good taste of everyday Yaoundé life.",
+    "tags": [
+      "food",
+      "walking",
+      "nightlife"
+    ],
+    "best_time": "Evenings",
+    "icon": "district",
+    "image": null
+  },
+  {
+    "id": 32,
+    "name": "École Nationale Supérieure Polytechnique",
+    "category": "University",
+    "neighborhood": "Ngoa-Ekelle",
+    "lat": 3.8665,
+    "lng": 11.5005,
+    "price": "Free to visit the grounds",
+    "description": "Cameroon's top engineering school, tucked into the same Ngoa-Ekelle university district as UY1 — famously competitive to get into.",
+    "tags": [
+      "education"
+    ],
+    "best_time": "Weekday afternoons",
+    "icon": "university",
+    "image": null
+  },
+  {
+    "id": 33,
+    "name": "Basilique Marie-Reine-des-Apôtres",
+    "category": "Heritage",
+    "neighborhood": "Mvolyé",
+    "lat": 3.857,
+    "lng": 11.5145,
+    "price": "Free",
+    "description": "A striking minor basilica on the hill of Mvolyé, the mother parish of the Archdiocese of Yaoundé — its terrace also gives one of the city's best southward views.",
+    "tags": [
+      "heritage",
+      "viewpoint",
+      "quiet"
+    ],
+    "best_time": "Mornings, Mass on Sundays",
+    "icon": "landmark",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilique%20Mari-Reine%20des%20apotres%20de%20Mvolye.JPG?width=900"
+  },
+  {
+    "id": 34,
+    "name": "Colline de Mvolyé",
+    "category": "Nature",
+    "neighborhood": "Mvolyé",
+    "lat": 3.858,
+    "lng": 11.515,
+    "price": "Free",
+    "description": "The hill that gives the Basilique its perch — a quiet climb rewarded with sweeping views over the southern half of the city.",
+    "tags": [
+      "nature",
+      "viewpoint",
+      "hiking"
+    ],
+    "best_time": "Late afternoon",
+    "icon": "hill",
+    "image": null
+  },
+  {
+    "id": 35,
+    "name": "Carrefour Warda",
+    "category": "Neighborhood",
+    "neighborhood": "Warda",
+    "lat": 3.8785,
+    "lng": 11.5085,
+    "price": "Free to walk",
+    "description": "A buzzing commercial crossroads with shops, supermarkets and street food side by side — one of the city's busiest everyday meeting points.",
+    "tags": [
+      "shopping",
+      "food"
+    ],
+    "best_time": "Daytime",
+    "icon": "district",
+    "image": null
+  },
+  {
+    "id": 36,
+    "name": "Marché Nkolndongo",
+    "category": "Market",
+    "neighborhood": "Nkolndongo",
+    "lat": 3.848,
+    "lng": 11.525,
+    "price": "Free entry",
+    "description": "A neighborhood market on the city's southern edge, less crowded than the big central markets and popular with locals for everyday shopping.",
+    "tags": [
+      "shopping",
+      "food"
+    ],
+    "best_time": "7:00 AM – 1:00 PM",
+    "icon": "market",
+    "image": null
+  }
+]

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Explore Yaoundé — Community Explorer{% endblock %}
+
+{% block content %}
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow-sm">Explore</span>
+      <h2>Every place, on the map.</h2>
+      <p>Filter by category, neighborhood or search — the map and the list stay in sync.</p>
+    </div>
+  </div>
+
+  <div class="explore-shell">
+    <aside class="filters">
+      <div class="filter-group">
+        <label for="searchInput">Search</label>
+        <input type="text" id="searchInput" placeholder="Name, description, area…">
+      </div>
+      <div class="filter-group">
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect"><option value="">All categories</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="neighborhoodSelect">Neighborhood</label>
+        <select id="neighborhoodSelect"><option value="">All neighborhoods</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Map</label>
+        <div id="map"></div>
+      </div>
+      <button class="btn btn-ghost btn-block" id="clearFiltersBtn">Clear filters</button>
+    </aside>
+
+    <div class="explore-results">
+      <div class="results-count" id="resultsCount">Loading…</div>
+      <div class="card-grid" id="resultsGrid"></div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ static_url('js/icons.js') }}"></script>
+<script src="{{ static_url('js/explore.js') }}"></script>
+{% endblock %}

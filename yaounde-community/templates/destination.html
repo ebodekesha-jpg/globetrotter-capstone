@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% import "_icons.html" as icons %}
+{% block title %}{{ dest.name }} — Yaoundé Community Explorer{% endblock %}
+
+{% block content %}
+{% set hero_gradients = {
+  'Market': 'linear-gradient(135deg, var(--clay), var(--clay-dark))',
+  'Nature': 'linear-gradient(135deg, var(--forest), var(--forest-dark))',
+  'Museum': 'linear-gradient(135deg, var(--indigo-soft), var(--indigo))',
+  'Heritage': 'linear-gradient(135deg, #8a6b2e, var(--gold))',
+  'Park': 'linear-gradient(135deg, #3a8562, var(--forest-dark))',
+  'Sports': 'linear-gradient(135deg, var(--clay-dark), #6b2d18)',
+  'Neighborhood': 'linear-gradient(135deg, var(--indigo), #46447c)',
+  'University': 'linear-gradient(135deg, var(--indigo), var(--plum))',
+  'School': 'linear-gradient(135deg, var(--gold), #b98531)',
+  'Cinema': 'linear-gradient(135deg, var(--plum), var(--plum-dark))',
+  'Restaurant': 'linear-gradient(135deg, var(--clay), var(--gold))',
+  'Supermarket': 'linear-gradient(135deg, var(--teal), var(--teal-dark))',
+  'Hotel': 'linear-gradient(135deg, var(--indigo-soft), var(--plum))',
+  'Culture': 'linear-gradient(135deg, var(--teal), var(--forest-dark))'
+} %}
+<section class="dest-hero {{ 'has-photo' if dest.image else '' }}"
+          data-cat="{{ dest.category }}"
+          style="{% if dest.image %}background-image: url('{{ dest.image }}');{% else %}background: {{ hero_gradients.get(dest.category, 'linear-gradient(135deg, var(--indigo-soft), var(--indigo))') }};{% endif %}">
+  <div class="wrap">
+    <span class="badge">{{ dest.category }} · {{ dest.neighborhood }}</span>
+    <h1>{{ dest.name }}</h1>
+    <p class="lead" style="max-width:600px;">{{ dest.description }}</p>
+    {% if dest.image %}<p class="photo-credit">Photo: Wikimedia Commons contributors (CC BY-SA)</p>{% endif %}
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="detail-grid">
+    <div>
+      <div class="info-card">
+        <h3>Good to know</h3>
+        <div class="fact-row"><span>Best time to go</span><span>{{ dest.best_time }}</span></div>
+        <div class="fact-row"><span>Typical cost</span><span>{{ dest.price }}</span></div>
+        <div class="fact-row"><span>Neighborhood</span><span>{{ dest.neighborhood }}</span></div>
+        <div class="fact-row"><span>Community rating</span><span id="factRating">—</span></div>
+      </div>
+
+      <div class="info-card">
+        <h3>Reviews from the community</h3>
+        <p style="font-size:0.82rem; margin-top:-6px;">Visible to everyone — no account needed to read them.</p>
+        <div id="reviewsList"><p>Loading reviews…</p></div>
+
+        {% if user %}
+        <div id="reviewFormArea" style="margin-top:20px;">
+          <h4>Leave a review</h4>
+          <div class="form-field">
+            <label>Your rating</label>
+            <div class="star-picker" id="starPicker">
+              <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="reviewComment">Your comment</label>
+            <textarea id="reviewComment" placeholder="What should other visitors know?"></textarea>
+          </div>
+          <button class="btn btn-primary" id="submitReviewBtn">Post review</button>
+        </div>
+        {% else %}
+        <div class="login-gate">
+          <span>🔒</span>
+          <div>
+            <strong>Log in to leave a review</strong>
+            <p>Reviews are tied to your account so other visitors know who to thank.</p>
+          </div>
+          <a class="btn btn-primary btn-sm" href="{{ url_for('login_page') }}?next=/destination/{{ dest.id }}">Log in</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div>
+      <div class="info-card">
+        <h3>Location</h3>
+        <div id="detailMap"></div>
+
+        <div class="directions-panel" id="directionsPanel">
+          <h4 style="margin:0 0 6px;">How to get there</h4>
+          <p style="margin:0 0 10px; font-size:0.85rem;">We'll use your current location to work out the best way to reach {{ dest.name }} — no account needed, this doesn't save anything.</p>
+          <button class="btn btn-primary btn-sm" id="getDirectionsBtn">📍 Get directions from my location</button>
+          <div id="directionsResult"></div>
+        </div>
+      </div>
+
+      {% if user %}
+      <button class="btn btn-forest btn-block" id="addItineraryBtn" data-dest-id="{{ dest.id }}">
+        + Add to my itinerary
+      </button>
+      {% else %}
+      <a class="btn btn-ghost btn-block" href="{{ url_for('login_page') }}?next=/destination/{{ dest.id }}">
+        🔒 Log in to add to your itinerary
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.__DEST = {
+    id: {{ dest.id }},
+    lat: {{ dest.lat }},
+    lng: {{ dest.lng }},
+    name: {{ dest.name | tojson }},
+    category: {{ dest.category | tojson }},
+    loggedIn: {{ 'true' if user else 'false' }}
+  };
+</script>
+<script src="{{ static_url('js/icons.js') }}"></script>
+<script src="{{ static_url('js/destination.js') }}"></script>
+{% endblock %}

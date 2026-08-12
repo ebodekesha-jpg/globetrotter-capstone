@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Community reviews — Yaoundé Community Explorer{% endblock %}
+
+{% block content %}
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow-sm">Community</span>
+      <h2>Every review, from every neighbor.</h2>
+      <p>No account needed to read what people are saying — log in only if you'd like to add your own.</p>
+    </div>
+  </div>
+  <div id="allReviews"><p>Loading reviews…</p></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(async function () {
+  const el = document.getElementById('allReviews');
+  try {
+    const data = await api('/api/reviews/recent?limit=50');
+    if (!data.reviews.length) {
+      el.innerHTML = '<div class="empty-state"><h3>No reviews yet</h3><p>Be the first to visit a place and leave one.</p></div>';
+      return;
+    }
+    el.innerHTML = data.reviews.map((r) => `
+      <div class="review-feed-item">
+        <div class="review-dest"><a href="/destination/${r.destination_id}">${r.destination_name}</a> · ${r.destination_category}</div>
+        <div class="review-head" style="margin-top:6px;">
+          <b>${r.user_name}</b>
+          <span class="review-date">${new Date(r.created_at).toLocaleDateString()}</span>
+        </div>
+        <div class="stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+        <p style="margin:6px 0 0;">${r.comment}</p>
+      </div>`).join('');
+  } catch (e) {
+    el.innerHTML = '<p>Could not load reviews right now.</p>';
+  }
+})();
+</script>
+{% endblock %}
